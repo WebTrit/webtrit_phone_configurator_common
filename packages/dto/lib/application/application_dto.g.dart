@@ -19,6 +19,10 @@ _$ApplicationDTOImpl _$$ApplicationDTOImplFromJson(Map<String, dynamic> json) =>
           ? null
           : GoogleServices.fromJson(
               json['googleServices'] as Map<String, dynamic>),
+      googleServicesDto: json['googleServicesDto'] == null
+          ? null
+          : GoogleServicesDto.fromJson(
+              json['googleServicesDto'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$ApplicationDTOImplToJson(
@@ -39,6 +43,7 @@ Map<String, dynamic> _$$ApplicationDTOImplToJson(
   writeNotNull('theme', instance.theme);
   writeNotNull('version', instance.version);
   writeNotNull('googleServices', instance.googleServices);
+  writeNotNull('googleServicesDto', instance.googleServicesDto);
   return val;
 }
 

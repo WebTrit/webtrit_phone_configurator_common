@@ -1,5 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+import 'google_services_dto.dart';
+
 part 'application_dto.freezed.dart';
 
 part 'application_dto.g.dart';
@@ -16,7 +18,8 @@ class ApplicationDTO with _$ApplicationDTO {
     String? coreUrl,
     String? theme,
     int? version,
-    GoogleServices? googleServices,
+    @Deprecated('Use GoogleServicesDto instead') GoogleServices? googleServices,
+    GoogleServicesDto? googleServicesDto,
   }) = _ApplicationDTO;
 
   factory ApplicationDTO.fromJson(Map<String, dynamic> json) => _$ApplicationDTOFromJson(json);
