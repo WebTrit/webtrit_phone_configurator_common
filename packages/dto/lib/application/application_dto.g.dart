@@ -17,12 +17,8 @@ _$ApplicationDTOImpl _$$ApplicationDTOImplFromJson(Map<String, dynamic> json) =>
       version: json['version'] as int?,
       googleServices: json['googleServices'] == null
           ? null
-          : GoogleServices.fromJson(
-              json['googleServices'] as Map<String, dynamic>),
-      googleServicesDto: json['googleServicesDto'] == null
-          ? null
           : GoogleServicesDto.fromJson(
-              json['googleServicesDto'] as Map<String, dynamic>),
+              json['googleServices'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$ApplicationDTOImplToJson(
@@ -43,34 +39,5 @@ Map<String, dynamic> _$$ApplicationDTOImplToJson(
   writeNotNull('theme', instance.theme);
   writeNotNull('version', instance.version);
   writeNotNull('googleServices', instance.googleServices);
-  writeNotNull('googleServicesDto', instance.googleServicesDto);
-  return val;
-}
-
-_$GoogleServicesDTOImpl _$$GoogleServicesDTOImplFromJson(
-        Map<String, dynamic> json) =>
-    _$GoogleServicesDTOImpl(
-      androidUrl: json['androidUrl'] as String?,
-      androidPath: json['androidPath'] as String?,
-      iosUrl: json['iosUrl'] as String?,
-      iosPath: json['iosPath'] as String?,
-      projectId: json['projectId'] as String?,
-    );
-
-Map<String, dynamic> _$$GoogleServicesDTOImplToJson(
-    _$GoogleServicesDTOImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('androidUrl', instance.androidUrl);
-  writeNotNull('androidPath', instance.androidPath);
-  writeNotNull('iosUrl', instance.iosUrl);
-  writeNotNull('iosPath', instance.iosPath);
-  writeNotNull('projectId', instance.projectId);
   return val;
 }

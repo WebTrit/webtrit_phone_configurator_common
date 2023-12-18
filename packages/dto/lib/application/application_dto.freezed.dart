@@ -27,10 +27,7 @@ mixin _$ApplicationDTO {
   String? get coreUrl => throw _privateConstructorUsedError;
   String? get theme => throw _privateConstructorUsedError;
   int? get version => throw _privateConstructorUsedError;
-  @Deprecated('Use GoogleServicesDto instead')
-  GoogleServices? get googleServices => throw _privateConstructorUsedError;
-  GoogleServicesDto? get googleServicesDto =>
-      throw _privateConstructorUsedError;
+  GoogleServicesDto? get googleServices => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -52,12 +49,9 @@ abstract class $ApplicationDTOCopyWith<$Res> {
       String? coreUrl,
       String? theme,
       int? version,
-      @Deprecated('Use GoogleServicesDto instead')
-      GoogleServices? googleServices,
-      GoogleServicesDto? googleServicesDto});
+      GoogleServicesDto? googleServices});
 
-  $GoogleServicesCopyWith<$Res>? get googleServices;
-  $GoogleServicesDtoCopyWith<$Res>? get googleServicesDto;
+  $GoogleServicesDtoCopyWith<$Res>? get googleServices;
 }
 
 /// @nodoc
@@ -81,7 +75,6 @@ class _$ApplicationDTOCopyWithImpl<$Res, $Val extends ApplicationDTO>
     Object? theme = freezed,
     Object? version = freezed,
     Object? googleServices = freezed,
-    Object? googleServicesDto = freezed,
   }) {
     return _then(_value.copyWith(
       id: freezed == id
@@ -115,35 +108,19 @@ class _$ApplicationDTOCopyWithImpl<$Res, $Val extends ApplicationDTO>
       googleServices: freezed == googleServices
           ? _value.googleServices
           : googleServices // ignore: cast_nullable_to_non_nullable
-              as GoogleServices?,
-      googleServicesDto: freezed == googleServicesDto
-          ? _value.googleServicesDto
-          : googleServicesDto // ignore: cast_nullable_to_non_nullable
               as GoogleServicesDto?,
     ) as $Val);
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $GoogleServicesCopyWith<$Res>? get googleServices {
+  $GoogleServicesDtoCopyWith<$Res>? get googleServices {
     if (_value.googleServices == null) {
       return null;
     }
 
-    return $GoogleServicesCopyWith<$Res>(_value.googleServices!, (value) {
+    return $GoogleServicesDtoCopyWith<$Res>(_value.googleServices!, (value) {
       return _then(_value.copyWith(googleServices: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $GoogleServicesDtoCopyWith<$Res>? get googleServicesDto {
-    if (_value.googleServicesDto == null) {
-      return null;
-    }
-
-    return $GoogleServicesDtoCopyWith<$Res>(_value.googleServicesDto!, (value) {
-      return _then(_value.copyWith(googleServicesDto: value) as $Val);
     });
   }
 }
@@ -164,14 +141,10 @@ abstract class _$$ApplicationDTOImplCopyWith<$Res>
       String? coreUrl,
       String? theme,
       int? version,
-      @Deprecated('Use GoogleServicesDto instead')
-      GoogleServices? googleServices,
-      GoogleServicesDto? googleServicesDto});
+      GoogleServicesDto? googleServices});
 
   @override
-  $GoogleServicesCopyWith<$Res>? get googleServices;
-  @override
-  $GoogleServicesDtoCopyWith<$Res>? get googleServicesDto;
+  $GoogleServicesDtoCopyWith<$Res>? get googleServices;
 }
 
 /// @nodoc
@@ -193,7 +166,6 @@ class __$$ApplicationDTOImplCopyWithImpl<$Res>
     Object? theme = freezed,
     Object? version = freezed,
     Object? googleServices = freezed,
-    Object? googleServicesDto = freezed,
   }) {
     return _then(_$ApplicationDTOImpl(
       id: freezed == id
@@ -227,10 +199,6 @@ class __$$ApplicationDTOImplCopyWithImpl<$Res>
       googleServices: freezed == googleServices
           ? _value.googleServices
           : googleServices // ignore: cast_nullable_to_non_nullable
-              as GoogleServices?,
-      googleServicesDto: freezed == googleServicesDto
-          ? _value.googleServicesDto
-          : googleServicesDto // ignore: cast_nullable_to_non_nullable
               as GoogleServicesDto?,
     ));
   }
@@ -248,8 +216,7 @@ class _$ApplicationDTOImpl implements _ApplicationDTO {
       this.coreUrl,
       this.theme,
       this.version,
-      @Deprecated('Use GoogleServicesDto instead') this.googleServices,
-      this.googleServicesDto});
+      this.googleServices});
 
   factory _$ApplicationDTOImpl.fromJson(Map<String, dynamic> json) =>
       _$$ApplicationDTOImplFromJson(json);
@@ -269,14 +236,11 @@ class _$ApplicationDTOImpl implements _ApplicationDTO {
   @override
   final int? version;
   @override
-  @Deprecated('Use GoogleServicesDto instead')
-  final GoogleServices? googleServices;
-  @override
-  final GoogleServicesDto? googleServicesDto;
+  final GoogleServicesDto? googleServices;
 
   @override
   String toString() {
-    return 'ApplicationDTO(id: $id, name: $name, platformIdentifier: $platformIdentifier, termsConditionsUrl: $termsConditionsUrl, coreUrl: $coreUrl, theme: $theme, version: $version, googleServices: $googleServices, googleServicesDto: $googleServicesDto)';
+    return 'ApplicationDTO(id: $id, name: $name, platformIdentifier: $platformIdentifier, termsConditionsUrl: $termsConditionsUrl, coreUrl: $coreUrl, theme: $theme, version: $version, googleServices: $googleServices)';
   }
 
   @override
@@ -294,24 +258,13 @@ class _$ApplicationDTOImpl implements _ApplicationDTO {
             (identical(other.theme, theme) || other.theme == theme) &&
             (identical(other.version, version) || other.version == version) &&
             (identical(other.googleServices, googleServices) ||
-                other.googleServices == googleServices) &&
-            (identical(other.googleServicesDto, googleServicesDto) ||
-                other.googleServicesDto == googleServicesDto));
+                other.googleServices == googleServices));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      name,
-      platformIdentifier,
-      termsConditionsUrl,
-      coreUrl,
-      theme,
-      version,
-      googleServices,
-      googleServicesDto);
+  int get hashCode => Object.hash(runtimeType, id, name, platformIdentifier,
+      termsConditionsUrl, coreUrl, theme, version, googleServices);
 
   @JsonKey(ignore: true)
   @override
@@ -337,9 +290,7 @@ abstract class _ApplicationDTO implements ApplicationDTO {
       final String? coreUrl,
       final String? theme,
       final int? version,
-      @Deprecated('Use GoogleServicesDto instead')
-      final GoogleServices? googleServices,
-      final GoogleServicesDto? googleServicesDto}) = _$ApplicationDTOImpl;
+      final GoogleServicesDto? googleServices}) = _$ApplicationDTOImpl;
 
   factory _ApplicationDTO.fromJson(Map<String, dynamic> json) =
       _$ApplicationDTOImpl.fromJson;
@@ -359,238 +310,9 @@ abstract class _ApplicationDTO implements ApplicationDTO {
   @override
   int? get version;
   @override
-  @Deprecated('Use GoogleServicesDto instead')
-  GoogleServices? get googleServices;
-  @override
-  GoogleServicesDto? get googleServicesDto;
+  GoogleServicesDto? get googleServices;
   @override
   @JsonKey(ignore: true)
   _$$ApplicationDTOImplCopyWith<_$ApplicationDTOImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-GoogleServices _$GoogleServicesFromJson(Map<String, dynamic> json) {
-  return _GoogleServicesDTO.fromJson(json);
-}
-
-/// @nodoc
-mixin _$GoogleServices {
-  String? get androidUrl => throw _privateConstructorUsedError;
-  String? get androidPath => throw _privateConstructorUsedError;
-  String? get iosUrl => throw _privateConstructorUsedError;
-  String? get iosPath => throw _privateConstructorUsedError;
-  String? get projectId => throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $GoogleServicesCopyWith<GoogleServices> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $GoogleServicesCopyWith<$Res> {
-  factory $GoogleServicesCopyWith(
-          GoogleServices value, $Res Function(GoogleServices) then) =
-      _$GoogleServicesCopyWithImpl<$Res, GoogleServices>;
-  @useResult
-  $Res call(
-      {String? androidUrl,
-      String? androidPath,
-      String? iosUrl,
-      String? iosPath,
-      String? projectId});
-}
-
-/// @nodoc
-class _$GoogleServicesCopyWithImpl<$Res, $Val extends GoogleServices>
-    implements $GoogleServicesCopyWith<$Res> {
-  _$GoogleServicesCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? androidUrl = freezed,
-    Object? androidPath = freezed,
-    Object? iosUrl = freezed,
-    Object? iosPath = freezed,
-    Object? projectId = freezed,
-  }) {
-    return _then(_value.copyWith(
-      androidUrl: freezed == androidUrl
-          ? _value.androidUrl
-          : androidUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
-      androidPath: freezed == androidPath
-          ? _value.androidPath
-          : androidPath // ignore: cast_nullable_to_non_nullable
-              as String?,
-      iosUrl: freezed == iosUrl
-          ? _value.iosUrl
-          : iosUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
-      iosPath: freezed == iosPath
-          ? _value.iosPath
-          : iosPath // ignore: cast_nullable_to_non_nullable
-              as String?,
-      projectId: freezed == projectId
-          ? _value.projectId
-          : projectId // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
-  }
-}
-
-/// @nodoc
-abstract class _$$GoogleServicesDTOImplCopyWith<$Res>
-    implements $GoogleServicesCopyWith<$Res> {
-  factory _$$GoogleServicesDTOImplCopyWith(_$GoogleServicesDTOImpl value,
-          $Res Function(_$GoogleServicesDTOImpl) then) =
-      __$$GoogleServicesDTOImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {String? androidUrl,
-      String? androidPath,
-      String? iosUrl,
-      String? iosPath,
-      String? projectId});
-}
-
-/// @nodoc
-class __$$GoogleServicesDTOImplCopyWithImpl<$Res>
-    extends _$GoogleServicesCopyWithImpl<$Res, _$GoogleServicesDTOImpl>
-    implements _$$GoogleServicesDTOImplCopyWith<$Res> {
-  __$$GoogleServicesDTOImplCopyWithImpl(_$GoogleServicesDTOImpl _value,
-      $Res Function(_$GoogleServicesDTOImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? androidUrl = freezed,
-    Object? androidPath = freezed,
-    Object? iosUrl = freezed,
-    Object? iosPath = freezed,
-    Object? projectId = freezed,
-  }) {
-    return _then(_$GoogleServicesDTOImpl(
-      androidUrl: freezed == androidUrl
-          ? _value.androidUrl
-          : androidUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
-      androidPath: freezed == androidPath
-          ? _value.androidPath
-          : androidPath // ignore: cast_nullable_to_non_nullable
-              as String?,
-      iosUrl: freezed == iosUrl
-          ? _value.iosUrl
-          : iosUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
-      iosPath: freezed == iosPath
-          ? _value.iosPath
-          : iosPath // ignore: cast_nullable_to_non_nullable
-              as String?,
-      projectId: freezed == projectId
-          ? _value.projectId
-          : projectId // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
-  }
-}
-
-/// @nodoc
-
-@JsonSerializable(includeIfNull: false)
-class _$GoogleServicesDTOImpl implements _GoogleServicesDTO {
-  const _$GoogleServicesDTOImpl(
-      {this.androidUrl,
-      this.androidPath,
-      this.iosUrl,
-      this.iosPath,
-      this.projectId});
-
-  factory _$GoogleServicesDTOImpl.fromJson(Map<String, dynamic> json) =>
-      _$$GoogleServicesDTOImplFromJson(json);
-
-  @override
-  final String? androidUrl;
-  @override
-  final String? androidPath;
-  @override
-  final String? iosUrl;
-  @override
-  final String? iosPath;
-  @override
-  final String? projectId;
-
-  @override
-  String toString() {
-    return 'GoogleServices(androidUrl: $androidUrl, androidPath: $androidPath, iosUrl: $iosUrl, iosPath: $iosPath, projectId: $projectId)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$GoogleServicesDTOImpl &&
-            (identical(other.androidUrl, androidUrl) ||
-                other.androidUrl == androidUrl) &&
-            (identical(other.androidPath, androidPath) ||
-                other.androidPath == androidPath) &&
-            (identical(other.iosUrl, iosUrl) || other.iosUrl == iosUrl) &&
-            (identical(other.iosPath, iosPath) || other.iosPath == iosPath) &&
-            (identical(other.projectId, projectId) ||
-                other.projectId == projectId));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(
-      runtimeType, androidUrl, androidPath, iosUrl, iosPath, projectId);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$GoogleServicesDTOImplCopyWith<_$GoogleServicesDTOImpl> get copyWith =>
-      __$$GoogleServicesDTOImplCopyWithImpl<_$GoogleServicesDTOImpl>(
-          this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$GoogleServicesDTOImplToJson(
-      this,
-    );
-  }
-}
-
-abstract class _GoogleServicesDTO implements GoogleServices {
-  const factory _GoogleServicesDTO(
-      {final String? androidUrl,
-      final String? androidPath,
-      final String? iosUrl,
-      final String? iosPath,
-      final String? projectId}) = _$GoogleServicesDTOImpl;
-
-  factory _GoogleServicesDTO.fromJson(Map<String, dynamic> json) =
-      _$GoogleServicesDTOImpl.fromJson;
-
-  @override
-  String? get androidUrl;
-  @override
-  String? get androidPath;
-  @override
-  String? get iosUrl;
-  @override
-  String? get iosPath;
-  @override
-  String? get projectId;
-  @override
-  @JsonKey(ignore: true)
-  _$$GoogleServicesDTOImplCopyWith<_$GoogleServicesDTOImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
