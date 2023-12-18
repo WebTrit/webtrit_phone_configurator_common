@@ -32,47 +32,63 @@ Map<String, dynamic> _$$GoogleServicesDtoImplToJson(
 _$IOSGoogleServicesDTOImpl _$$IOSGoogleServicesDTOImplFromJson(
         Map<String, dynamic> json) =>
     _$IOSGoogleServicesDTOImpl(
-      bundleId: json['bundleId'] as String?,
-      apiKey: json['apiKey'] as String?,
-      appId: json['appId'] as String?,
-      iosClientId: json['iosClientId'] as String?,
-      messagingSenderId: json['messagingSenderId'] as String?,
-      projectId: json['projectId'] as String?,
-      storageBucket: json['storageBucket'] as String?,
+      clientId: json['client_id'] as String?,
+      reversedClientId: json['reversed_client_id'] as String?,
+      apiKey: json['api_key'] as String?,
+      gcmSenderId: json['gsm_sender_id'] as String?,
+      bundleId: json['bundle_id'] as String?,
+      projectId: json['project_id'] as String?,
+      storageBucket: json['storage_bucket'] as String?,
+      isAdsEnabled: json['is_ads_enabled'] as bool?,
+      isAnalyticsEnabled: json['is_analytics_enabled'] as bool?,
+      isAppinviteEnabled: json['is_appinvite_enabled'] as bool?,
+      isGsmEnabled: json['is_gsm_enabled'] as bool?,
+      isSigninEnabled: json['is_signin_enabled'] as bool?,
+      googleAppId: json['google_app_id'] as String?,
     );
 
 Map<String, dynamic> _$$IOSGoogleServicesDTOImplToJson(
         _$IOSGoogleServicesDTOImpl instance) =>
     <String, dynamic>{
-      'bundleId': instance.bundleId,
-      'apiKey': instance.apiKey,
-      'appId': instance.appId,
-      'iosClientId': instance.iosClientId,
-      'messagingSenderId': instance.messagingSenderId,
-      'projectId': instance.projectId,
-      'storageBucket': instance.storageBucket,
+      'client_id': instance.clientId,
+      'reversed_client_id': instance.reversedClientId,
+      'api_key': instance.apiKey,
+      'gsm_sender_id': instance.gcmSenderId,
+      'bundle_id': instance.bundleId,
+      'project_id': instance.projectId,
+      'storage_bucket': instance.storageBucket,
+      'is_ads_enabled': instance.isAdsEnabled,
+      'is_analytics_enabled': instance.isAnalyticsEnabled,
+      'is_appinvite_enabled': instance.isAppinviteEnabled,
+      'is_gsm_enabled': instance.isGsmEnabled,
+      'is_signin_enabled': instance.isSigninEnabled,
+      'google_app_id': instance.googleAppId,
     };
 
 _$AndroidGoogleServicesDTOImpl _$$AndroidGoogleServicesDTOImplFromJson(
         Map<String, dynamic> json) =>
     _$AndroidGoogleServicesDTOImpl(
-      apiKey: json['apiKey'] as String?,
-      appId: json['appId'] as String?,
+      projectId: json['project_id'] as String?,
+      projectNumber: json['project_number'] as String?,
+      storageBucket: json['storage_bucket'] as String?,
+      mobileSdkAppId: json['mobilesdk_app_id'] as String?,
       packageName: json['package_name'] as String?,
-      messagingSenderId: json['messagingSenderId'] as String?,
-      projectId: json['projectId'] as String?,
-      storageBucket: json['storageBucket'] as String?,
+      clientId: json['client_id'] as String?,
+      clientType: json['client_type'] as int?,
+      apiKey: json['apiKey'] as String?,
     );
 
 Map<String, dynamic> _$$AndroidGoogleServicesDTOImplToJson(
         _$AndroidGoogleServicesDTOImpl instance) =>
     <String, dynamic>{
-      'apiKey': instance.apiKey,
-      'appId': instance.appId,
+      'project_id': instance.projectId,
+      'project_number': instance.projectNumber,
+      'storage_bucket': instance.storageBucket,
+      'mobilesdk_app_id': instance.mobileSdkAppId,
       'package_name': instance.packageName,
-      'messagingSenderId': instance.messagingSenderId,
-      'projectId': instance.projectId,
-      'storageBucket': instance.storageBucket,
+      'client_id': instance.clientId,
+      'client_type': instance.clientType,
+      'apiKey': instance.apiKey,
     };
 
 _$WebGoogleServicesDTOImpl _$$WebGoogleServicesDTOImplFromJson(

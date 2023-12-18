@@ -258,20 +258,32 @@ IOSGoogleServicesDTO _$IOSGoogleServicesDTOFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$IOSGoogleServicesDTO {
-  @JsonKey(name: 'bundleId')
-  String? get bundleId => throw _privateConstructorUsedError;
-  @JsonKey(name: 'apiKey')
+  @JsonKey(name: 'client_id')
+  String? get clientId => throw _privateConstructorUsedError;
+  @JsonKey(name: 'reversed_client_id')
+  String? get reversedClientId => throw _privateConstructorUsedError;
+  @JsonKey(name: 'api_key')
   String? get apiKey => throw _privateConstructorUsedError;
-  @JsonKey(name: 'appId')
-  String? get appId => throw _privateConstructorUsedError;
-  @JsonKey(name: 'iosClientId')
-  String? get iosClientId => throw _privateConstructorUsedError;
-  @JsonKey(name: 'messagingSenderId')
-  String? get messagingSenderId => throw _privateConstructorUsedError;
-  @JsonKey(name: 'projectId')
+  @JsonKey(name: 'gsm_sender_id')
+  String? get gcmSenderId => throw _privateConstructorUsedError;
+  @JsonKey(name: 'bundle_id')
+  String? get bundleId => throw _privateConstructorUsedError;
+  @JsonKey(name: 'project_id')
   String? get projectId => throw _privateConstructorUsedError;
-  @JsonKey(name: 'storageBucket')
+  @JsonKey(name: 'storage_bucket')
   String? get storageBucket => throw _privateConstructorUsedError;
+  @JsonKey(name: 'is_ads_enabled')
+  bool? get isAdsEnabled => throw _privateConstructorUsedError;
+  @JsonKey(name: 'is_analytics_enabled')
+  bool? get isAnalyticsEnabled => throw _privateConstructorUsedError;
+  @JsonKey(name: 'is_appinvite_enabled')
+  bool? get isAppinviteEnabled => throw _privateConstructorUsedError;
+  @JsonKey(name: 'is_gsm_enabled')
+  bool? get isGsmEnabled => throw _privateConstructorUsedError;
+  @JsonKey(name: 'is_signin_enabled')
+  bool? get isSigninEnabled => throw _privateConstructorUsedError;
+  @JsonKey(name: 'google_app_id')
+  String? get googleAppId => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -286,13 +298,19 @@ abstract class $IOSGoogleServicesDTOCopyWith<$Res> {
       _$IOSGoogleServicesDTOCopyWithImpl<$Res, IOSGoogleServicesDTO>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'bundleId') String? bundleId,
-      @JsonKey(name: 'apiKey') String? apiKey,
-      @JsonKey(name: 'appId') String? appId,
-      @JsonKey(name: 'iosClientId') String? iosClientId,
-      @JsonKey(name: 'messagingSenderId') String? messagingSenderId,
-      @JsonKey(name: 'projectId') String? projectId,
-      @JsonKey(name: 'storageBucket') String? storageBucket});
+      {@JsonKey(name: 'client_id') String? clientId,
+      @JsonKey(name: 'reversed_client_id') String? reversedClientId,
+      @JsonKey(name: 'api_key') String? apiKey,
+      @JsonKey(name: 'gsm_sender_id') String? gcmSenderId,
+      @JsonKey(name: 'bundle_id') String? bundleId,
+      @JsonKey(name: 'project_id') String? projectId,
+      @JsonKey(name: 'storage_bucket') String? storageBucket,
+      @JsonKey(name: 'is_ads_enabled') bool? isAdsEnabled,
+      @JsonKey(name: 'is_analytics_enabled') bool? isAnalyticsEnabled,
+      @JsonKey(name: 'is_appinvite_enabled') bool? isAppinviteEnabled,
+      @JsonKey(name: 'is_gsm_enabled') bool? isGsmEnabled,
+      @JsonKey(name: 'is_signin_enabled') bool? isSigninEnabled,
+      @JsonKey(name: 'google_app_id') String? googleAppId});
 }
 
 /// @nodoc
@@ -309,34 +327,40 @@ class _$IOSGoogleServicesDTOCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? bundleId = freezed,
+    Object? clientId = freezed,
+    Object? reversedClientId = freezed,
     Object? apiKey = freezed,
-    Object? appId = freezed,
-    Object? iosClientId = freezed,
-    Object? messagingSenderId = freezed,
+    Object? gcmSenderId = freezed,
+    Object? bundleId = freezed,
     Object? projectId = freezed,
     Object? storageBucket = freezed,
+    Object? isAdsEnabled = freezed,
+    Object? isAnalyticsEnabled = freezed,
+    Object? isAppinviteEnabled = freezed,
+    Object? isGsmEnabled = freezed,
+    Object? isSigninEnabled = freezed,
+    Object? googleAppId = freezed,
   }) {
     return _then(_value.copyWith(
-      bundleId: freezed == bundleId
-          ? _value.bundleId
-          : bundleId // ignore: cast_nullable_to_non_nullable
+      clientId: freezed == clientId
+          ? _value.clientId
+          : clientId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      reversedClientId: freezed == reversedClientId
+          ? _value.reversedClientId
+          : reversedClientId // ignore: cast_nullable_to_non_nullable
               as String?,
       apiKey: freezed == apiKey
           ? _value.apiKey
           : apiKey // ignore: cast_nullable_to_non_nullable
               as String?,
-      appId: freezed == appId
-          ? _value.appId
-          : appId // ignore: cast_nullable_to_non_nullable
+      gcmSenderId: freezed == gcmSenderId
+          ? _value.gcmSenderId
+          : gcmSenderId // ignore: cast_nullable_to_non_nullable
               as String?,
-      iosClientId: freezed == iosClientId
-          ? _value.iosClientId
-          : iosClientId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      messagingSenderId: freezed == messagingSenderId
-          ? _value.messagingSenderId
-          : messagingSenderId // ignore: cast_nullable_to_non_nullable
+      bundleId: freezed == bundleId
+          ? _value.bundleId
+          : bundleId // ignore: cast_nullable_to_non_nullable
               as String?,
       projectId: freezed == projectId
           ? _value.projectId
@@ -345,6 +369,30 @@ class _$IOSGoogleServicesDTOCopyWithImpl<$Res,
       storageBucket: freezed == storageBucket
           ? _value.storageBucket
           : storageBucket // ignore: cast_nullable_to_non_nullable
+              as String?,
+      isAdsEnabled: freezed == isAdsEnabled
+          ? _value.isAdsEnabled
+          : isAdsEnabled // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      isAnalyticsEnabled: freezed == isAnalyticsEnabled
+          ? _value.isAnalyticsEnabled
+          : isAnalyticsEnabled // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      isAppinviteEnabled: freezed == isAppinviteEnabled
+          ? _value.isAppinviteEnabled
+          : isAppinviteEnabled // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      isGsmEnabled: freezed == isGsmEnabled
+          ? _value.isGsmEnabled
+          : isGsmEnabled // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      isSigninEnabled: freezed == isSigninEnabled
+          ? _value.isSigninEnabled
+          : isSigninEnabled // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      googleAppId: freezed == googleAppId
+          ? _value.googleAppId
+          : googleAppId // ignore: cast_nullable_to_non_nullable
               as String?,
     ) as $Val);
   }
@@ -359,13 +407,19 @@ abstract class _$$IOSGoogleServicesDTOImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'bundleId') String? bundleId,
-      @JsonKey(name: 'apiKey') String? apiKey,
-      @JsonKey(name: 'appId') String? appId,
-      @JsonKey(name: 'iosClientId') String? iosClientId,
-      @JsonKey(name: 'messagingSenderId') String? messagingSenderId,
-      @JsonKey(name: 'projectId') String? projectId,
-      @JsonKey(name: 'storageBucket') String? storageBucket});
+      {@JsonKey(name: 'client_id') String? clientId,
+      @JsonKey(name: 'reversed_client_id') String? reversedClientId,
+      @JsonKey(name: 'api_key') String? apiKey,
+      @JsonKey(name: 'gsm_sender_id') String? gcmSenderId,
+      @JsonKey(name: 'bundle_id') String? bundleId,
+      @JsonKey(name: 'project_id') String? projectId,
+      @JsonKey(name: 'storage_bucket') String? storageBucket,
+      @JsonKey(name: 'is_ads_enabled') bool? isAdsEnabled,
+      @JsonKey(name: 'is_analytics_enabled') bool? isAnalyticsEnabled,
+      @JsonKey(name: 'is_appinvite_enabled') bool? isAppinviteEnabled,
+      @JsonKey(name: 'is_gsm_enabled') bool? isGsmEnabled,
+      @JsonKey(name: 'is_signin_enabled') bool? isSigninEnabled,
+      @JsonKey(name: 'google_app_id') String? googleAppId});
 }
 
 /// @nodoc
@@ -379,34 +433,40 @@ class __$$IOSGoogleServicesDTOImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? bundleId = freezed,
+    Object? clientId = freezed,
+    Object? reversedClientId = freezed,
     Object? apiKey = freezed,
-    Object? appId = freezed,
-    Object? iosClientId = freezed,
-    Object? messagingSenderId = freezed,
+    Object? gcmSenderId = freezed,
+    Object? bundleId = freezed,
     Object? projectId = freezed,
     Object? storageBucket = freezed,
+    Object? isAdsEnabled = freezed,
+    Object? isAnalyticsEnabled = freezed,
+    Object? isAppinviteEnabled = freezed,
+    Object? isGsmEnabled = freezed,
+    Object? isSigninEnabled = freezed,
+    Object? googleAppId = freezed,
   }) {
     return _then(_$IOSGoogleServicesDTOImpl(
-      bundleId: freezed == bundleId
-          ? _value.bundleId
-          : bundleId // ignore: cast_nullable_to_non_nullable
+      clientId: freezed == clientId
+          ? _value.clientId
+          : clientId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      reversedClientId: freezed == reversedClientId
+          ? _value.reversedClientId
+          : reversedClientId // ignore: cast_nullable_to_non_nullable
               as String?,
       apiKey: freezed == apiKey
           ? _value.apiKey
           : apiKey // ignore: cast_nullable_to_non_nullable
               as String?,
-      appId: freezed == appId
-          ? _value.appId
-          : appId // ignore: cast_nullable_to_non_nullable
+      gcmSenderId: freezed == gcmSenderId
+          ? _value.gcmSenderId
+          : gcmSenderId // ignore: cast_nullable_to_non_nullable
               as String?,
-      iosClientId: freezed == iosClientId
-          ? _value.iosClientId
-          : iosClientId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      messagingSenderId: freezed == messagingSenderId
-          ? _value.messagingSenderId
-          : messagingSenderId // ignore: cast_nullable_to_non_nullable
+      bundleId: freezed == bundleId
+          ? _value.bundleId
+          : bundleId // ignore: cast_nullable_to_non_nullable
               as String?,
       projectId: freezed == projectId
           ? _value.projectId
@@ -416,6 +476,30 @@ class __$$IOSGoogleServicesDTOImplCopyWithImpl<$Res>
           ? _value.storageBucket
           : storageBucket // ignore: cast_nullable_to_non_nullable
               as String?,
+      isAdsEnabled: freezed == isAdsEnabled
+          ? _value.isAdsEnabled
+          : isAdsEnabled // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      isAnalyticsEnabled: freezed == isAnalyticsEnabled
+          ? _value.isAnalyticsEnabled
+          : isAnalyticsEnabled // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      isAppinviteEnabled: freezed == isAppinviteEnabled
+          ? _value.isAppinviteEnabled
+          : isAppinviteEnabled // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      isGsmEnabled: freezed == isGsmEnabled
+          ? _value.isGsmEnabled
+          : isGsmEnabled // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      isSigninEnabled: freezed == isSigninEnabled
+          ? _value.isSigninEnabled
+          : isSigninEnabled // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      googleAppId: freezed == googleAppId
+          ? _value.googleAppId
+          : googleAppId // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -424,42 +508,66 @@ class __$$IOSGoogleServicesDTOImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$IOSGoogleServicesDTOImpl implements _IOSGoogleServicesDTO {
   const _$IOSGoogleServicesDTOImpl(
-      {@JsonKey(name: 'bundleId') this.bundleId,
-      @JsonKey(name: 'apiKey') this.apiKey,
-      @JsonKey(name: 'appId') this.appId,
-      @JsonKey(name: 'iosClientId') this.iosClientId,
-      @JsonKey(name: 'messagingSenderId') this.messagingSenderId,
-      @JsonKey(name: 'projectId') this.projectId,
-      @JsonKey(name: 'storageBucket') this.storageBucket});
+      {@JsonKey(name: 'client_id') this.clientId,
+      @JsonKey(name: 'reversed_client_id') this.reversedClientId,
+      @JsonKey(name: 'api_key') this.apiKey,
+      @JsonKey(name: 'gsm_sender_id') this.gcmSenderId,
+      @JsonKey(name: 'bundle_id') this.bundleId,
+      @JsonKey(name: 'project_id') this.projectId,
+      @JsonKey(name: 'storage_bucket') this.storageBucket,
+      @JsonKey(name: 'is_ads_enabled') this.isAdsEnabled,
+      @JsonKey(name: 'is_analytics_enabled') this.isAnalyticsEnabled,
+      @JsonKey(name: 'is_appinvite_enabled') this.isAppinviteEnabled,
+      @JsonKey(name: 'is_gsm_enabled') this.isGsmEnabled,
+      @JsonKey(name: 'is_signin_enabled') this.isSigninEnabled,
+      @JsonKey(name: 'google_app_id') this.googleAppId});
 
   factory _$IOSGoogleServicesDTOImpl.fromJson(Map<String, dynamic> json) =>
       _$$IOSGoogleServicesDTOImplFromJson(json);
 
   @override
-  @JsonKey(name: 'bundleId')
-  final String? bundleId;
+  @JsonKey(name: 'client_id')
+  final String? clientId;
   @override
-  @JsonKey(name: 'apiKey')
+  @JsonKey(name: 'reversed_client_id')
+  final String? reversedClientId;
+  @override
+  @JsonKey(name: 'api_key')
   final String? apiKey;
   @override
-  @JsonKey(name: 'appId')
-  final String? appId;
+  @JsonKey(name: 'gsm_sender_id')
+  final String? gcmSenderId;
   @override
-  @JsonKey(name: 'iosClientId')
-  final String? iosClientId;
+  @JsonKey(name: 'bundle_id')
+  final String? bundleId;
   @override
-  @JsonKey(name: 'messagingSenderId')
-  final String? messagingSenderId;
-  @override
-  @JsonKey(name: 'projectId')
+  @JsonKey(name: 'project_id')
   final String? projectId;
   @override
-  @JsonKey(name: 'storageBucket')
+  @JsonKey(name: 'storage_bucket')
   final String? storageBucket;
+  @override
+  @JsonKey(name: 'is_ads_enabled')
+  final bool? isAdsEnabled;
+  @override
+  @JsonKey(name: 'is_analytics_enabled')
+  final bool? isAnalyticsEnabled;
+  @override
+  @JsonKey(name: 'is_appinvite_enabled')
+  final bool? isAppinviteEnabled;
+  @override
+  @JsonKey(name: 'is_gsm_enabled')
+  final bool? isGsmEnabled;
+  @override
+  @JsonKey(name: 'is_signin_enabled')
+  final bool? isSigninEnabled;
+  @override
+  @JsonKey(name: 'google_app_id')
+  final String? googleAppId;
 
   @override
   String toString() {
-    return 'IOSGoogleServicesDTO(bundleId: $bundleId, apiKey: $apiKey, appId: $appId, iosClientId: $iosClientId, messagingSenderId: $messagingSenderId, projectId: $projectId, storageBucket: $storageBucket)';
+    return 'IOSGoogleServicesDTO(clientId: $clientId, reversedClientId: $reversedClientId, apiKey: $apiKey, gcmSenderId: $gcmSenderId, bundleId: $bundleId, projectId: $projectId, storageBucket: $storageBucket, isAdsEnabled: $isAdsEnabled, isAnalyticsEnabled: $isAnalyticsEnabled, isAppinviteEnabled: $isAppinviteEnabled, isGsmEnabled: $isGsmEnabled, isSigninEnabled: $isSigninEnabled, googleAppId: $googleAppId)';
   }
 
   @override
@@ -467,24 +575,50 @@ class _$IOSGoogleServicesDTOImpl implements _IOSGoogleServicesDTO {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$IOSGoogleServicesDTOImpl &&
+            (identical(other.clientId, clientId) ||
+                other.clientId == clientId) &&
+            (identical(other.reversedClientId, reversedClientId) ||
+                other.reversedClientId == reversedClientId) &&
+            (identical(other.apiKey, apiKey) || other.apiKey == apiKey) &&
+            (identical(other.gcmSenderId, gcmSenderId) ||
+                other.gcmSenderId == gcmSenderId) &&
             (identical(other.bundleId, bundleId) ||
                 other.bundleId == bundleId) &&
-            (identical(other.apiKey, apiKey) || other.apiKey == apiKey) &&
-            (identical(other.appId, appId) || other.appId == appId) &&
-            (identical(other.iosClientId, iosClientId) ||
-                other.iosClientId == iosClientId) &&
-            (identical(other.messagingSenderId, messagingSenderId) ||
-                other.messagingSenderId == messagingSenderId) &&
             (identical(other.projectId, projectId) ||
                 other.projectId == projectId) &&
             (identical(other.storageBucket, storageBucket) ||
-                other.storageBucket == storageBucket));
+                other.storageBucket == storageBucket) &&
+            (identical(other.isAdsEnabled, isAdsEnabled) ||
+                other.isAdsEnabled == isAdsEnabled) &&
+            (identical(other.isAnalyticsEnabled, isAnalyticsEnabled) ||
+                other.isAnalyticsEnabled == isAnalyticsEnabled) &&
+            (identical(other.isAppinviteEnabled, isAppinviteEnabled) ||
+                other.isAppinviteEnabled == isAppinviteEnabled) &&
+            (identical(other.isGsmEnabled, isGsmEnabled) ||
+                other.isGsmEnabled == isGsmEnabled) &&
+            (identical(other.isSigninEnabled, isSigninEnabled) ||
+                other.isSigninEnabled == isSigninEnabled) &&
+            (identical(other.googleAppId, googleAppId) ||
+                other.googleAppId == googleAppId));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, bundleId, apiKey, appId,
-      iosClientId, messagingSenderId, projectId, storageBucket);
+  int get hashCode => Object.hash(
+      runtimeType,
+      clientId,
+      reversedClientId,
+      apiKey,
+      gcmSenderId,
+      bundleId,
+      projectId,
+      storageBucket,
+      isAdsEnabled,
+      isAnalyticsEnabled,
+      isAppinviteEnabled,
+      isGsmEnabled,
+      isSigninEnabled,
+      googleAppId);
 
   @JsonKey(ignore: true)
   @override
@@ -504,39 +638,63 @@ class _$IOSGoogleServicesDTOImpl implements _IOSGoogleServicesDTO {
 
 abstract class _IOSGoogleServicesDTO implements IOSGoogleServicesDTO {
   const factory _IOSGoogleServicesDTO(
-          {@JsonKey(name: 'bundleId') final String? bundleId,
-          @JsonKey(name: 'apiKey') final String? apiKey,
-          @JsonKey(name: 'appId') final String? appId,
-          @JsonKey(name: 'iosClientId') final String? iosClientId,
-          @JsonKey(name: 'messagingSenderId') final String? messagingSenderId,
-          @JsonKey(name: 'projectId') final String? projectId,
-          @JsonKey(name: 'storageBucket') final String? storageBucket}) =
+          {@JsonKey(name: 'client_id') final String? clientId,
+          @JsonKey(name: 'reversed_client_id') final String? reversedClientId,
+          @JsonKey(name: 'api_key') final String? apiKey,
+          @JsonKey(name: 'gsm_sender_id') final String? gcmSenderId,
+          @JsonKey(name: 'bundle_id') final String? bundleId,
+          @JsonKey(name: 'project_id') final String? projectId,
+          @JsonKey(name: 'storage_bucket') final String? storageBucket,
+          @JsonKey(name: 'is_ads_enabled') final bool? isAdsEnabled,
+          @JsonKey(name: 'is_analytics_enabled') final bool? isAnalyticsEnabled,
+          @JsonKey(name: 'is_appinvite_enabled') final bool? isAppinviteEnabled,
+          @JsonKey(name: 'is_gsm_enabled') final bool? isGsmEnabled,
+          @JsonKey(name: 'is_signin_enabled') final bool? isSigninEnabled,
+          @JsonKey(name: 'google_app_id') final String? googleAppId}) =
       _$IOSGoogleServicesDTOImpl;
 
   factory _IOSGoogleServicesDTO.fromJson(Map<String, dynamic> json) =
       _$IOSGoogleServicesDTOImpl.fromJson;
 
   @override
-  @JsonKey(name: 'bundleId')
-  String? get bundleId;
+  @JsonKey(name: 'client_id')
+  String? get clientId;
   @override
-  @JsonKey(name: 'apiKey')
+  @JsonKey(name: 'reversed_client_id')
+  String? get reversedClientId;
+  @override
+  @JsonKey(name: 'api_key')
   String? get apiKey;
   @override
-  @JsonKey(name: 'appId')
-  String? get appId;
+  @JsonKey(name: 'gsm_sender_id')
+  String? get gcmSenderId;
   @override
-  @JsonKey(name: 'iosClientId')
-  String? get iosClientId;
+  @JsonKey(name: 'bundle_id')
+  String? get bundleId;
   @override
-  @JsonKey(name: 'messagingSenderId')
-  String? get messagingSenderId;
-  @override
-  @JsonKey(name: 'projectId')
+  @JsonKey(name: 'project_id')
   String? get projectId;
   @override
-  @JsonKey(name: 'storageBucket')
+  @JsonKey(name: 'storage_bucket')
   String? get storageBucket;
+  @override
+  @JsonKey(name: 'is_ads_enabled')
+  bool? get isAdsEnabled;
+  @override
+  @JsonKey(name: 'is_analytics_enabled')
+  bool? get isAnalyticsEnabled;
+  @override
+  @JsonKey(name: 'is_appinvite_enabled')
+  bool? get isAppinviteEnabled;
+  @override
+  @JsonKey(name: 'is_gsm_enabled')
+  bool? get isGsmEnabled;
+  @override
+  @JsonKey(name: 'is_signin_enabled')
+  bool? get isSigninEnabled;
+  @override
+  @JsonKey(name: 'google_app_id')
+  String? get googleAppId;
   @override
   @JsonKey(ignore: true)
   _$$IOSGoogleServicesDTOImplCopyWith<_$IOSGoogleServicesDTOImpl>
@@ -550,18 +708,22 @@ AndroidGoogleServicesDTO _$AndroidGoogleServicesDTOFromJson(
 
 /// @nodoc
 mixin _$AndroidGoogleServicesDTO {
-  @JsonKey(name: 'apiKey')
-  String? get apiKey => throw _privateConstructorUsedError;
-  @JsonKey(name: 'appId')
-  String? get appId => throw _privateConstructorUsedError;
+  @JsonKey(name: 'project_id')
+  String? get projectId => throw _privateConstructorUsedError;
+  @JsonKey(name: 'project_number')
+  String? get projectNumber => throw _privateConstructorUsedError;
+  @JsonKey(name: 'storage_bucket')
+  String? get storageBucket => throw _privateConstructorUsedError;
+  @JsonKey(name: 'mobilesdk_app_id')
+  String? get mobileSdkAppId => throw _privateConstructorUsedError;
   @JsonKey(name: 'package_name')
   String? get packageName => throw _privateConstructorUsedError;
-  @JsonKey(name: 'messagingSenderId')
-  String? get messagingSenderId => throw _privateConstructorUsedError;
-  @JsonKey(name: 'projectId')
-  String? get projectId => throw _privateConstructorUsedError;
-  @JsonKey(name: 'storageBucket')
-  String? get storageBucket => throw _privateConstructorUsedError;
+  @JsonKey(name: 'client_id')
+  String? get clientId => throw _privateConstructorUsedError;
+  @JsonKey(name: 'client_type')
+  int? get clientType => throw _privateConstructorUsedError;
+  @JsonKey(name: 'apiKey')
+  String? get apiKey => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -576,12 +738,14 @@ abstract class $AndroidGoogleServicesDTOCopyWith<$Res> {
       _$AndroidGoogleServicesDTOCopyWithImpl<$Res, AndroidGoogleServicesDTO>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'apiKey') String? apiKey,
-      @JsonKey(name: 'appId') String? appId,
+      {@JsonKey(name: 'project_id') String? projectId,
+      @JsonKey(name: 'project_number') String? projectNumber,
+      @JsonKey(name: 'storage_bucket') String? storageBucket,
+      @JsonKey(name: 'mobilesdk_app_id') String? mobileSdkAppId,
       @JsonKey(name: 'package_name') String? packageName,
-      @JsonKey(name: 'messagingSenderId') String? messagingSenderId,
-      @JsonKey(name: 'projectId') String? projectId,
-      @JsonKey(name: 'storageBucket') String? storageBucket});
+      @JsonKey(name: 'client_id') String? clientId,
+      @JsonKey(name: 'client_type') int? clientType,
+      @JsonKey(name: 'apiKey') String? apiKey});
 }
 
 /// @nodoc
@@ -598,37 +762,47 @@ class _$AndroidGoogleServicesDTOCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? apiKey = freezed,
-    Object? appId = freezed,
-    Object? packageName = freezed,
-    Object? messagingSenderId = freezed,
     Object? projectId = freezed,
+    Object? projectNumber = freezed,
     Object? storageBucket = freezed,
+    Object? mobileSdkAppId = freezed,
+    Object? packageName = freezed,
+    Object? clientId = freezed,
+    Object? clientType = freezed,
+    Object? apiKey = freezed,
   }) {
     return _then(_value.copyWith(
-      apiKey: freezed == apiKey
-          ? _value.apiKey
-          : apiKey // ignore: cast_nullable_to_non_nullable
+      projectId: freezed == projectId
+          ? _value.projectId
+          : projectId // ignore: cast_nullable_to_non_nullable
               as String?,
-      appId: freezed == appId
-          ? _value.appId
-          : appId // ignore: cast_nullable_to_non_nullable
+      projectNumber: freezed == projectNumber
+          ? _value.projectNumber
+          : projectNumber // ignore: cast_nullable_to_non_nullable
+              as String?,
+      storageBucket: freezed == storageBucket
+          ? _value.storageBucket
+          : storageBucket // ignore: cast_nullable_to_non_nullable
+              as String?,
+      mobileSdkAppId: freezed == mobileSdkAppId
+          ? _value.mobileSdkAppId
+          : mobileSdkAppId // ignore: cast_nullable_to_non_nullable
               as String?,
       packageName: freezed == packageName
           ? _value.packageName
           : packageName // ignore: cast_nullable_to_non_nullable
               as String?,
-      messagingSenderId: freezed == messagingSenderId
-          ? _value.messagingSenderId
-          : messagingSenderId // ignore: cast_nullable_to_non_nullable
+      clientId: freezed == clientId
+          ? _value.clientId
+          : clientId // ignore: cast_nullable_to_non_nullable
               as String?,
-      projectId: freezed == projectId
-          ? _value.projectId
-          : projectId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      storageBucket: freezed == storageBucket
-          ? _value.storageBucket
-          : storageBucket // ignore: cast_nullable_to_non_nullable
+      clientType: freezed == clientType
+          ? _value.clientType
+          : clientType // ignore: cast_nullable_to_non_nullable
+              as int?,
+      apiKey: freezed == apiKey
+          ? _value.apiKey
+          : apiKey // ignore: cast_nullable_to_non_nullable
               as String?,
     ) as $Val);
   }
@@ -644,12 +818,14 @@ abstract class _$$AndroidGoogleServicesDTOImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'apiKey') String? apiKey,
-      @JsonKey(name: 'appId') String? appId,
+      {@JsonKey(name: 'project_id') String? projectId,
+      @JsonKey(name: 'project_number') String? projectNumber,
+      @JsonKey(name: 'storage_bucket') String? storageBucket,
+      @JsonKey(name: 'mobilesdk_app_id') String? mobileSdkAppId,
       @JsonKey(name: 'package_name') String? packageName,
-      @JsonKey(name: 'messagingSenderId') String? messagingSenderId,
-      @JsonKey(name: 'projectId') String? projectId,
-      @JsonKey(name: 'storageBucket') String? storageBucket});
+      @JsonKey(name: 'client_id') String? clientId,
+      @JsonKey(name: 'client_type') int? clientType,
+      @JsonKey(name: 'apiKey') String? apiKey});
 }
 
 /// @nodoc
@@ -665,37 +841,47 @@ class __$$AndroidGoogleServicesDTOImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? apiKey = freezed,
-    Object? appId = freezed,
-    Object? packageName = freezed,
-    Object? messagingSenderId = freezed,
     Object? projectId = freezed,
+    Object? projectNumber = freezed,
     Object? storageBucket = freezed,
+    Object? mobileSdkAppId = freezed,
+    Object? packageName = freezed,
+    Object? clientId = freezed,
+    Object? clientType = freezed,
+    Object? apiKey = freezed,
   }) {
     return _then(_$AndroidGoogleServicesDTOImpl(
-      apiKey: freezed == apiKey
-          ? _value.apiKey
-          : apiKey // ignore: cast_nullable_to_non_nullable
+      projectId: freezed == projectId
+          ? _value.projectId
+          : projectId // ignore: cast_nullable_to_non_nullable
               as String?,
-      appId: freezed == appId
-          ? _value.appId
-          : appId // ignore: cast_nullable_to_non_nullable
+      projectNumber: freezed == projectNumber
+          ? _value.projectNumber
+          : projectNumber // ignore: cast_nullable_to_non_nullable
+              as String?,
+      storageBucket: freezed == storageBucket
+          ? _value.storageBucket
+          : storageBucket // ignore: cast_nullable_to_non_nullable
+              as String?,
+      mobileSdkAppId: freezed == mobileSdkAppId
+          ? _value.mobileSdkAppId
+          : mobileSdkAppId // ignore: cast_nullable_to_non_nullable
               as String?,
       packageName: freezed == packageName
           ? _value.packageName
           : packageName // ignore: cast_nullable_to_non_nullable
               as String?,
-      messagingSenderId: freezed == messagingSenderId
-          ? _value.messagingSenderId
-          : messagingSenderId // ignore: cast_nullable_to_non_nullable
+      clientId: freezed == clientId
+          ? _value.clientId
+          : clientId // ignore: cast_nullable_to_non_nullable
               as String?,
-      projectId: freezed == projectId
-          ? _value.projectId
-          : projectId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      storageBucket: freezed == storageBucket
-          ? _value.storageBucket
-          : storageBucket // ignore: cast_nullable_to_non_nullable
+      clientType: freezed == clientType
+          ? _value.clientType
+          : clientType // ignore: cast_nullable_to_non_nullable
+              as int?,
+      apiKey: freezed == apiKey
+          ? _value.apiKey
+          : apiKey // ignore: cast_nullable_to_non_nullable
               as String?,
     ));
   }
@@ -705,38 +891,46 @@ class __$$AndroidGoogleServicesDTOImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$AndroidGoogleServicesDTOImpl implements _AndroidGoogleServicesDTO {
   const _$AndroidGoogleServicesDTOImpl(
-      {@JsonKey(name: 'apiKey') this.apiKey,
-      @JsonKey(name: 'appId') this.appId,
+      {@JsonKey(name: 'project_id') this.projectId,
+      @JsonKey(name: 'project_number') this.projectNumber,
+      @JsonKey(name: 'storage_bucket') this.storageBucket,
+      @JsonKey(name: 'mobilesdk_app_id') this.mobileSdkAppId,
       @JsonKey(name: 'package_name') this.packageName,
-      @JsonKey(name: 'messagingSenderId') this.messagingSenderId,
-      @JsonKey(name: 'projectId') this.projectId,
-      @JsonKey(name: 'storageBucket') this.storageBucket});
+      @JsonKey(name: 'client_id') this.clientId,
+      @JsonKey(name: 'client_type') this.clientType,
+      @JsonKey(name: 'apiKey') this.apiKey});
 
   factory _$AndroidGoogleServicesDTOImpl.fromJson(Map<String, dynamic> json) =>
       _$$AndroidGoogleServicesDTOImplFromJson(json);
 
   @override
-  @JsonKey(name: 'apiKey')
-  final String? apiKey;
+  @JsonKey(name: 'project_id')
+  final String? projectId;
   @override
-  @JsonKey(name: 'appId')
-  final String? appId;
+  @JsonKey(name: 'project_number')
+  final String? projectNumber;
+  @override
+  @JsonKey(name: 'storage_bucket')
+  final String? storageBucket;
+  @override
+  @JsonKey(name: 'mobilesdk_app_id')
+  final String? mobileSdkAppId;
   @override
   @JsonKey(name: 'package_name')
   final String? packageName;
   @override
-  @JsonKey(name: 'messagingSenderId')
-  final String? messagingSenderId;
+  @JsonKey(name: 'client_id')
+  final String? clientId;
   @override
-  @JsonKey(name: 'projectId')
-  final String? projectId;
+  @JsonKey(name: 'client_type')
+  final int? clientType;
   @override
-  @JsonKey(name: 'storageBucket')
-  final String? storageBucket;
+  @JsonKey(name: 'apiKey')
+  final String? apiKey;
 
   @override
   String toString() {
-    return 'AndroidGoogleServicesDTO(apiKey: $apiKey, appId: $appId, packageName: $packageName, messagingSenderId: $messagingSenderId, projectId: $projectId, storageBucket: $storageBucket)';
+    return 'AndroidGoogleServicesDTO(projectId: $projectId, projectNumber: $projectNumber, storageBucket: $storageBucket, mobileSdkAppId: $mobileSdkAppId, packageName: $packageName, clientId: $clientId, clientType: $clientType, apiKey: $apiKey)';
   }
 
   @override
@@ -744,22 +938,27 @@ class _$AndroidGoogleServicesDTOImpl implements _AndroidGoogleServicesDTO {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AndroidGoogleServicesDTOImpl &&
-            (identical(other.apiKey, apiKey) || other.apiKey == apiKey) &&
-            (identical(other.appId, appId) || other.appId == appId) &&
-            (identical(other.packageName, packageName) ||
-                other.packageName == packageName) &&
-            (identical(other.messagingSenderId, messagingSenderId) ||
-                other.messagingSenderId == messagingSenderId) &&
             (identical(other.projectId, projectId) ||
                 other.projectId == projectId) &&
+            (identical(other.projectNumber, projectNumber) ||
+                other.projectNumber == projectNumber) &&
             (identical(other.storageBucket, storageBucket) ||
-                other.storageBucket == storageBucket));
+                other.storageBucket == storageBucket) &&
+            (identical(other.mobileSdkAppId, mobileSdkAppId) ||
+                other.mobileSdkAppId == mobileSdkAppId) &&
+            (identical(other.packageName, packageName) ||
+                other.packageName == packageName) &&
+            (identical(other.clientId, clientId) ||
+                other.clientId == clientId) &&
+            (identical(other.clientType, clientType) ||
+                other.clientType == clientType) &&
+            (identical(other.apiKey, apiKey) || other.apiKey == apiKey));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, apiKey, appId, packageName,
-      messagingSenderId, projectId, storageBucket);
+  int get hashCode => Object.hash(runtimeType, projectId, projectNumber,
+      storageBucket, mobileSdkAppId, packageName, clientId, clientType, apiKey);
 
   @JsonKey(ignore: true)
   @override
@@ -778,35 +977,43 @@ class _$AndroidGoogleServicesDTOImpl implements _AndroidGoogleServicesDTO {
 
 abstract class _AndroidGoogleServicesDTO implements AndroidGoogleServicesDTO {
   const factory _AndroidGoogleServicesDTO(
-          {@JsonKey(name: 'apiKey') final String? apiKey,
-          @JsonKey(name: 'appId') final String? appId,
+          {@JsonKey(name: 'project_id') final String? projectId,
+          @JsonKey(name: 'project_number') final String? projectNumber,
+          @JsonKey(name: 'storage_bucket') final String? storageBucket,
+          @JsonKey(name: 'mobilesdk_app_id') final String? mobileSdkAppId,
           @JsonKey(name: 'package_name') final String? packageName,
-          @JsonKey(name: 'messagingSenderId') final String? messagingSenderId,
-          @JsonKey(name: 'projectId') final String? projectId,
-          @JsonKey(name: 'storageBucket') final String? storageBucket}) =
+          @JsonKey(name: 'client_id') final String? clientId,
+          @JsonKey(name: 'client_type') final int? clientType,
+          @JsonKey(name: 'apiKey') final String? apiKey}) =
       _$AndroidGoogleServicesDTOImpl;
 
   factory _AndroidGoogleServicesDTO.fromJson(Map<String, dynamic> json) =
       _$AndroidGoogleServicesDTOImpl.fromJson;
 
   @override
-  @JsonKey(name: 'apiKey')
-  String? get apiKey;
+  @JsonKey(name: 'project_id')
+  String? get projectId;
   @override
-  @JsonKey(name: 'appId')
-  String? get appId;
+  @JsonKey(name: 'project_number')
+  String? get projectNumber;
+  @override
+  @JsonKey(name: 'storage_bucket')
+  String? get storageBucket;
+  @override
+  @JsonKey(name: 'mobilesdk_app_id')
+  String? get mobileSdkAppId;
   @override
   @JsonKey(name: 'package_name')
   String? get packageName;
   @override
-  @JsonKey(name: 'messagingSenderId')
-  String? get messagingSenderId;
+  @JsonKey(name: 'client_id')
+  String? get clientId;
   @override
-  @JsonKey(name: 'projectId')
-  String? get projectId;
+  @JsonKey(name: 'client_type')
+  int? get clientType;
   @override
-  @JsonKey(name: 'storageBucket')
-  String? get storageBucket;
+  @JsonKey(name: 'apiKey')
+  String? get apiKey;
   @override
   @JsonKey(ignore: true)
   _$$AndroidGoogleServicesDTOImplCopyWith<_$AndroidGoogleServicesDTOImpl>
